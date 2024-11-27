@@ -27,6 +27,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,17 +35,17 @@
     <div class="container-fluid bg-light position-relative shadow">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
             <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
-                <i class="flaticon-043-teddy-bear"></i>
-                <span class="text-primary">KidKinder</span>
+                <img class="img-fluid rounded-circle mx-auto mb-3" src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-1/442487557_459010816495160_3811604534313378149_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=f4b9fd&_nc_eui2=AeE4iroivMzleLb9zcLeSzCch1EFWo4UmaqHUQVajhSZqgEUAu3nMr6RX1ePnOkSQdXWW_gqR5U61S4At4v9k3C9&_nc_ohc=dNoNWMOs_ooQ7kNvgH0P3HZ&_nc_zt=24&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=AC80MjZU3ZoLC3b9shgbkso&oh=00_AYAnWhLq_kZm6AJoR8yzSGx6PYX89gTE-Soy2yvd4WPdpw&oe=674CD6AA" style="width: 50px; height: 50px;" alt="">
+                <span class="text-primary">PAOLFS</span>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="class.html" class="nav-item nav-link active">Classes</a>
+                    <a href="class.html" class="nav-item nav-link">Classes</a>
                     <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
@@ -55,7 +56,7 @@
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary px-4">Join Class</a>
+                <!-- <a href="" class="btn btn-primary px-4">Join Class</a> -->
             </div>
         </nav>
     </div>
@@ -63,7 +64,7 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid bg-primary mb-5">
+    <div class="container-fluid bg-primary mb-5"data-aos="fade-up">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
             <h3 class="display-3 font-weight-bold text-white">Our Classes</h3>
             <div class="d-inline-flex text-white">
@@ -77,7 +78,7 @@
 
 
     <!-- Class Start -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5" data-aos="fade-up">
         <div class="container">
             <div class="text-center pb-2">
                 <p class="section-title px-5"><span class="px-2">Classes Offered</span></p>
@@ -169,7 +170,7 @@
                         <a class="btn btn-primary px-4 mx-auto mb-4 openModalBtn">Join Now</a>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-5">
+                <div class="col-lg-4 mb-5" data-aos="fade-up">
                     <div class="card border-0 bg-light shadow-sm pb-2">
                         <img class="card-img-top mb-2" src="img/grade4.jpg" alt="">
                         <div class="card-body text-center">
@@ -197,7 +198,7 @@
                         <a class="btn btn-primary px-4 mx-auto mb-4 openModalBtn">Join Now</a>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-5">
+                <div class="col-lg-4 mb-5" data-aos="fade-up">
                     <div class="card border-0 bg-light shadow-sm pb-2">
                         <img class="card-img-top mb-2" src="img/grade5.jpg" alt="">
                         <div class="card-body text-center">
@@ -225,7 +226,7 @@
                         <a class="btn btn-primary px-4 mx-auto mb-4 openModalBtn">Join Now</a>
                     </div>
                 </div>
-                    <div class="col-lg-4 mb-5">
+                    <div class="col-lg-4 mb-5" data-aos="fade-up">
                         <div class="card border-0 bg-light shadow-sm pb-2">
                             <img class="card-img-top mb-2" src="img/grade6.jpg" alt="">
                             <div class="card-body text-center">
@@ -257,7 +258,7 @@
         </div>
     </div>
     <!-- Class Start -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5" data-aos="fade-up">
         <div class="container">
             <div class="text-center pb-2">
                 <p class="section-title px-5"><span class="px-2">Popular Classes</span></p>
@@ -353,16 +354,65 @@
     </div>
     <!-- Registration End -->
 
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close-btn">&times;</span>
+            <h2>Student Registration</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="parentName">Parent's Name</label>
+                    <input type="text" id="parentName" name="parentName" required placeholder="Enter Parent's Name">
+                </div>
+                <div class="form-group">
+                    <label for="kidsName">Child's Name</label>
+                    <input type="text" id="kidsName" name="kidsName" required placeholder="Enter Child's Name">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="grade">Grade</label>
+                    <select id="grade" name="grade" required>
+                        <option value="">Select Grade</option>
+                        <option value="1">Grade 1</option>
+                        <option value="2">Grade 2</option>
+                        <option value="3">Grade 3</option>
+                        <option value="4">Grade 4</option>
+                        <option value="5">Grade 5</option>
+                        <option value="6">Grade 6</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Additional Classes</label>
+                    <select id="grade" name="grade" required>
+                        <option value="">Select Grade</option>
+                        <option value="1">Drawing Class</option>
+                        <option value="2">Language Learning</option>
+                        <option value="3">Robotics</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <span id="closeThankYouModal" class="close-btn">&times;</span>
+            <h2>Thank You for Registering!</h2>
+            <p>The school will contact you in a few days regarding your registration.</p>
+        </div>
+    </div>
     <!-- Footer Start -->
-    <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5" data-aos="fade-up">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0" style="font-size: 40px; line-height: 40px;">
-                    <i class="flaticon-043-teddy-bear"></i>
-                    <span class="text-white">KidKinder</span>
+                    <span class="text-white">PAOLFS</span>
                 </a>
-                <p>Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea dolor et magna dolor, elitr rebum duo est sed diam elitr. Stet elitr stet diam duo eos rebum ipsum diam ipsum elitr.</p>
+                <p></p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
                         style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
@@ -380,14 +430,14 @@
                     <h4 class="fa fa-map-marker-alt text-primary"></h4>
                     <div class="pl-3">
                         <h5 class="text-white">Address</h5>
-                        <p>123 Street, New York, USA</p>
+                        <p>Bayani Road Fort Bonifacio, 1630, Taguig City, Manila</p>
                     </div>
                 </div>
                 <div class="d-flex">
                     <h4 class="fa fa-envelope text-primary"></h4>
                     <div class="pl-3">
                         <h5 class="text-white">Email</h5>
-                        <p>info@example.com</p>
+                        <p>paolfs@edu.com</p>
                     </div>
                 </div>
                 <div class="d-flex">
@@ -401,11 +451,11 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h3 class="text-primary mb-4">Quick Links</h3>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Classes</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Blog</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="class.html"><i class="fa fa-angle-right mr-2"></i>Our Classes</a>
+                    <a class="text-white mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -426,9 +476,7 @@
         </div>
         <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, .2);;">
             <p class="m-0 text-center text-white">
-                &copy; <a class="text-primary font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved. Designed
-                by
-                <a class="text-primary font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+                &copy; <a class="text-primary font-weight-bold" href="#">Philippine Army officers' Ladies Foundation School</a>. All Rights Reserved. 
             </p>
         </div>
     </div>
@@ -453,6 +501,11 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
